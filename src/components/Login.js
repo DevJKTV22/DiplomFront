@@ -11,7 +11,7 @@ export default function Login(){
     const Auth = async (e) => {
         e.preventDefault();
         try {    
-            const response = await axios.post(`http://localhost:5000/users/auth/login`,{
+            const response = await axios.post(`https://diplomback-f1217ff0e554.herokuapp.com/users/auth/login`,{
                 email: email,
                 password: password,
             });

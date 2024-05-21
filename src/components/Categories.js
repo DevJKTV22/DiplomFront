@@ -7,7 +7,7 @@ export default function Categories({ catId, onClickCategory }) {
 
     useEffect(() => {
         const getCategory = async () => {
-            const response = await axios.get(`http://localhost:5000/categories`);
+            const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/categories`);
             setCategory(response.data);
         };
         getCategory();

@@ -9,7 +9,7 @@ export default function AddPost(){
 
     React.useEffect(() =>{
         const getCategory = async () =>{
-            const response = await axios.get(`http://localhost:5000/categories`);
+            const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/categories`);
             setCategory(response.data);
         };
         getCategory();
@@ -52,7 +52,7 @@ export default function AddPost(){
     const savePost = async (e) =>{
         e.preventDefault();
         try {
-            await axios.post(`http://localhost:5000/posts`, {
+            await axios.post(`https://diplomback-f1217ff0e554.herokuapp.com/posts`, {
                 title: title,
                 news_text: news_text,
                 category_id: categoryId,
@@ -62,7 +62,7 @@ export default function AddPost(){
             });
             let formData = new FormData();
             formData.append('file',image.data);
-            await fetch(`http://localhost:5000/image`, {
+            await fetch(`https://diplomback-f1217ff0e554.herokuapp.com/image`, {
                 method: `POST`,
                 body:formData,
             });

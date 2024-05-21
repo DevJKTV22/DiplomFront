@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://diplomback-f1217ff0e554.herokuapp.com',
 });
 
 instance.interceptors.request.use((config) => {

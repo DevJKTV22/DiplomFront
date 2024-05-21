@@ -7,14 +7,14 @@ export default function Blog() {
     const [categories, setCategories] = useState([]);
 
     const fetchNews = async (categoryId) => {
-        const url = categoryId === 0 ? `http://localhost:5000/posts/` : `http://localhost:5000/posts/category/${categoryId}`;
+        const url = categoryId === 0 ? `https://diplomback-f1217ff0e554.herokuapp.com/posts/` : `https://diplomback-f1217ff0e554.herokuapp.com/categories${categoryId}`;
         const response = await fetch(url);
         const data = await response.json();
         setNews(data);
     };
 
     const fetchCategories = async () => {
-        const response = await fetch('http://localhost:5000/categories/');
+        const response = await fetch('https://diplomback-f1217ff0e554.herokuapp.com/categories/');
         const data = await response.json();
         setCategories(data);
     };

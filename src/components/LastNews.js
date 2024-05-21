@@ -6,7 +6,7 @@ export default function LastNews() {
     const [lastPost, setLastPost] = useState([]);
     useEffect(() => {
         
-        fetch('http://localhost:5000/posts/last')
+        fetch('https://diplomback-f1217ff0e554.herokuapp.com/posts/last')
           .then(response => response.json())
           .then(data => setLastPost(data))
           .catch(error => console.error('Error fetching last post:', error));

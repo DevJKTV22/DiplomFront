@@ -10,7 +10,7 @@ export default function CatDetail( ) {
     useEffect(() => {
       const fetchData = async () => {
         
-            const response = await axios.get(`http://localhost:5000/animal/${id}`);
+            const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/animal/${id}`);
             setAnimal(response.data);
           
         

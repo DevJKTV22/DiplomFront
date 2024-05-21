@@ -23,43 +23,43 @@ export default function PostsList() {
         getCats();
     },[])
     const getCats = async () => {
-        const response = await axios.get(`http://localhost:5000/animal/`);
+        const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/animal/`);
         setAnimals(response.data);
     };
     const deleteCat = async (id) => {
         if (window.confirm('Delete record #' + id + '?')) {
-            await axios.delete(`http://localhost:5000/animal/${id}`);
+            await axios.delete(`https://diplomback-f1217ff0e554.herokuapp.com/animal/${id}`);
             getCats()
         }
     };
     const getPosts = async () => {
-        const response = await axios.get(`http://localhost:5000/posts`);
+        const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/posts`);
         setPosts(response.data);
     };
     const deletePost = async (id) => {
         
-            await axios.delete(`http://localhost:5000/posts/${id}`);
+            await axios.delete(`https://diplomback-f1217ff0e554.herokuapp.com/posts/${id}`);
             getPosts()
         
     };
     const getNewsComment = async () => {
-        const response = await axios.get(`http://localhost:5000/commentpost/`);
+        const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/commentpost/`);
         setNewsComment(response.data);
     };
     const deleteNewsComment = async (id) => {
         if (window.confirm('Delete record #' + id + '?')) {
-            await axios.delete(`http://localhost:5000/commentpost/${id}`);
+            await axios.delete(`https://diplomback-f1217ff0e554.herokuapp.com/commentpost/${id}`);
             getNewsComment()
         }
     };
 
     const getCatComment = async () => {
-        const response = await axios.get(`http://localhost:5000/commentanimal/`);
+        const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/commentanimal/`);
         setCatComment(response.data);
     };
     const deleteCatComment = async (id) => {
         if (window.confirm('Delete record #' + id + '?')) {
-            await axios.delete(`http://localhost:5000/commentanimal/${id}`);
+            await axios.delete(`https://diplomback-f1217ff0e554.herokuapp.com/commentanimal/${id}`);
             getCatComment()
         }
     };

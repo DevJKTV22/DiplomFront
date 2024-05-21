@@ -13,7 +13,7 @@ export default function BlogComment( ) {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/commentpost/post/${id}`);
+        const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/commentpost/post/${id}`);
         setComments(response.data);
       } catch (error) {
         console.error('Error fetching comments:', error);

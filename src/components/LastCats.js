@@ -7,7 +7,7 @@ export default function LastCats() {
 
   useEffect(() => {
 
-    fetch(`http://localhost:5000/animal/last`)
+    fetch(`https://diplomback-f1217ff0e554.herokuapp.com/animal/last`)
       .then(response => response.json())
       .then(data => setLastAnimals(data))
       .catch(error => console.error('Error fetching last animals:', error));

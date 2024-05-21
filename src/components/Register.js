@@ -13,7 +13,7 @@ export default function Register() {
     const RegisterSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`http://localhost:5000/users/auth/register`,{
+            await axios.post(`https://diplomback-f1217ff0e554.herokuapp.com/users/auth/register`,{
                 name: name,
                 email: email,
                 password: password,

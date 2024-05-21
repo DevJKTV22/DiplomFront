@@ -13,7 +13,7 @@ export default function AddDonation() {
     const savePost = async (e) => {
       e.preventDefault();
       try {
-        await axios.post(`http://localhost:5000/donation`, {
+        await axios.post(`https://diplomback-f1217ff0e554.herokuapp.com/donation`, {
           
           author: author,
           text: text,

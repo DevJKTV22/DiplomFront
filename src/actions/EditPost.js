@@ -7,7 +7,7 @@ export default function EditPost(){
     const [categories, setCategory] = React.useState([]);
     React.useEffect(() =>{
         const getCategory = async () => {
-            const response = await axios.get(`http://localhost:5000/categories`);
+            const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/categories`);
             setCategory(response.data);
         };
         getCategory();
@@ -32,7 +32,7 @@ export default function EditPost(){
     const {id} = useParams();
     React.useEffect(() =>{
         const getPostById = async () =>{
-            const response = await axios.get(`http://localhost:5000/posts/${id}`);
+            const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/posts/${id}`);
             setTitle(response.data.title);
             setNews_text(response.data.news_text);
             setFile(response.data.photo);
@@ -44,7 +44,7 @@ export default function EditPost(){
 
     const updatePost =async (e)=> {
         e.preventDefault();
-        await axios.patch(`http://localhost:5000/posts/${id}`,{
+        await axios.patch(`https://diplomback-f1217ff0e554.herokuapp.com/posts/${id}`,{
             title:title,
             news_text: news_text,
             category_id: categoryId,
@@ -53,7 +53,7 @@ export default function EditPost(){
 
         let formData = new FormData();
         formData.append('file',image.data);
-        await fetch(`http://localhost:5000/image`,{
+        await fetch(`https://diplomback-f1217ff0e554.herokuapp.com/image`,{
             method: 'POST',
             body: formData,
         });

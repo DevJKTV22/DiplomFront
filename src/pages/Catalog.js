@@ -7,7 +7,7 @@ export default function Catalog() {
 
   useEffect(() => {
 
-    fetch(`http://localhost:5000/animal/`)
+    fetch(`https://diplomback-f1217ff0e554.herokuapp.com/animal/`)
       .then(response => response.json())
       .then(data => setAnimals(data))
       .catch(error => console.error('Error fetching animals:', error));

@@ -13,7 +13,7 @@ export default function CatComment( ) {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/commentanimal/animal/${id}`);
+        const response = await axios.get(`https://diplomback-f1217ff0e554.herokuapp.com/commentanimal/animal/${id}`);
         setComments(response.data);
       } catch (error) {
         console.error('Error fetching comments:', error);

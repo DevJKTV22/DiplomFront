@@ -40,7 +40,7 @@ export default function AddCat({ onCommentAdded }) {
       }
 
     try {
-      await axios.post(`http://localhost:5000/animal/`, {      
+      await axios.post(`https://diplomback-f1217ff0e554.herokuapp.com/animal/`, {      
         name:name,
         sex:sex,
         age:age,
@@ -53,7 +53,7 @@ export default function AddCat({ onCommentAdded }) {
       });
       let formData = new FormData();
             formData.append('file', image.data);
-            await fetch(`http://localhost:5000/image`, {
+            await fetch(`https://diplomback-f1217ff0e554.herokuapp.com/image`, {
                 method: `POST`,
                 body: formData,
             });

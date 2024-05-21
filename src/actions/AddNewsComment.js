@@ -12,7 +12,7 @@ export default function AddNewsComment({ onCommentAdded }) {
   const saveNewsPost = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5000/commentpost/`, {
+      await axios.post(`https://diplomback-f1217ff0e554.herokuapp.com/commentpost/`, {
         
         author_name: author_name,
         text: text,
