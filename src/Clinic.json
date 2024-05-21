@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Haabersti Loomakliinik",
+      "address": "Õismäe tee 115A, Tallinn",
+      "phone": "+372 659 3160",
+      "image":"HaberstiLoma.svg"
+    },
+    {
+      "name": "Eesti Maaülikooli kliinik",
+      "address": "Fr. R. Kreutzwaldi 62, Tartu",
+      "phone": "+ 372 503 3878",
+      "image":"EMloomakliinik.png"
+    },
+    {
+      "name": "Veterinaarkliinik Vetekspert",
+      "address": "Tallinn Ussimäe tee 12/1, 13911",
+      "phone": "+372 635 24 55 ",
+      "image":"vetekpert.svg"
+    },
+    {
+      "name": "Pet City OÜ",
+      "address": "Mustamäe tee 44/2 10621 Tallinn",
+      "phone": "+372 682 76 72 ",
+      "image":"petcity.svg"
+    }
+  ]
