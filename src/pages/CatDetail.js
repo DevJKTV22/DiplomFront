@@ -56,7 +56,7 @@ export default function CatDetail( ) {
             </div>
 
             <div className="mt-6">
-                <p className="mb-2 text-lg font-semibold ">Sex: <span className="max-w-md mb-4 text-gray-500 " > {animal.sex} </span></p>
+                <p className="mb-2 text-lg font-semibold ">Gender: <span className="max-w-md mb-4 text-gray-500 " > {animal.sex} </span></p>
                 <div className="grid grid-cols-2 gap-4 pb-4 mt-2 mb-4 border-b-2 border-gray-300 lg:grid-cols-3">
                 </div>
             </div>

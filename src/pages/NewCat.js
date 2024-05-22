@@ -125,7 +125,7 @@ export default function AddCat({ onCommentAdded }) {
 
                             <div className="mt-6">
                                 <div className="flex justify-between  ">
-                                <label className="mb-2 text-lg font-semibold ">Sex: </label>
+                                <label className="mb-2 text-lg font-semibold ">Gender: </label>
                                 <select className="max-w-md md:w-1/2 w-1/3 mb-4 text-gray-800 bg-gray-100 text-lg font-semibold" onChange={(e) => setSex(e.target.value)} required >
                                     <option value={sex} selected >Male  </option>
                                     <option value="Female">Female </option>
