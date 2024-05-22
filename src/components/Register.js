@@ -36,19 +36,19 @@ export default function Register() {
           <h2 className="text-gray-900 text-lg font-medium title-font mb-5"> Registration</h2>
               <form className="space-y-4 md:space-y-6" onSubmit={RegisterSubmit}>
                   <div>
-                      <label for="name" className="block leading-7 text-sm text-gray-600">Your name</label>
+                      <label htmlFor="name" className="block leading-7 text-sm text-gray-600">Your name</label>
                       <input type="text" name="name" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white  border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Name (min 3 symbols)" required=""/>
                   </div>
                   <div>
-                      <label for="email" className="block leading-7 text-sm text-gray-600">Your email</label>
+                      <label htmlFor="email" className="block leading-7 text-sm text-gray-600">Your email</label>
                       <input type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full bg-white  border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="name@company.com" required=""/>
                   </div>
                   <div>
-                      <label for="password" className="block leading-7 text-sm text-gray-600">Password</label>
+                      <label htmlFor="password" className="block leading-7 text-sm text-gray-600">Password</label>
                       <input type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="•••••••• (min 6 symbols)" className="w-full bg-white  border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required=""/>
                   </div>
                   <div>
-                      <label for="confirm-password" className="block leading-7 text-sm text-gray-600">Confirm password</label>
+                      <label htmlFor="confirm-password" className="block leading-7 text-sm text-gray-600">Confirm password</label>
                       <input type="confirm-password" name="confirm-password" id="confirm-password" value={confPassword} onChange={(e) => setConfPassword(e.target.value)} placeholder="••••••••" className="w-full bg-white  border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required=""/>
                   </div>
                   
