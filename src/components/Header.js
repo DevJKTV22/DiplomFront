@@ -32,7 +32,7 @@ export default function Header(){
     };
   return (
     <>
-        <header className="" >
+        <header className="  " >
             <div className="z-50 w-full mx-auto text-gray-600 body-font bg-gray-50 border ">
                 <div className="container mx-auto flex flex-wrap  flex-col md:flex-row items-center ">
                     <div className="w-2/12 flex flex-row justify-start ">
