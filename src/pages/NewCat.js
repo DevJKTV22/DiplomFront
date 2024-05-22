@@ -115,7 +115,7 @@ export default function AddCat({ onCommentAdded }) {
                             </div>
 
                             <div className="mt-6">
-                                <div className="flex justify-between  ">
+                                <div className="flex justify-between">
                                 <label className="mb-2 text-lg font-semibold ">Age:</label> 
                                 <input className="max-w-md md:w-1/2 w-1/3 mb-4 text-gray-800 bg-gray-100 text-lg font-semibold" value={age} min="0" max="30" placeholder="Age" type="number" onChange={(e) => setAge(e.target.value)} required />
                                 </div>

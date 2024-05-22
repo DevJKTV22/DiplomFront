@@ -45,7 +45,7 @@ export default function Catalog() {
                     <img className="border shadow "  src={'/images/' + data.photo } alt="Cat "/>
                     <a className=" text-2xl  flex items-center mt-auto text-white bg-gray-400  py-3 px-4 w-full focus:outline-none hover:bg-gray-500 border shadow" href={'catalog/'+data.id}>
                         <h3 >{data.name}</h3>
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
                     </a>
