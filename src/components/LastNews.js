@@ -26,7 +26,7 @@ export default function LastNews() {
         <div className="w-full md:w-4/6 ">
             
             {lastPost.map((data)=>(
-            <div className="mb-6 flex flex-wrap ">
+            <div  key={data.id} className="mb-6 flex flex-wrap ">
                 <div className="mb-6  w-full shrink-0 grow-0 basis-auto pr-3 md:mb-0 md:w-3/12">
                     <div className="relative  overflow-hidden  bg-gray-400 ">
                         <img className="opacity-80 w-full" src={'/images/' + data.photo }  alt="Louvre" />

@@ -21,12 +21,12 @@ export default function LastCats() {
             <div className="flex flex-wrap -m-4 justify-between px-2">
 
                 {lastAnimals.map((data)=>(
-                <div className=" xl:w-1/4 md:w-1/2 w-full">
+                <div  key={data.id} className=" xl:w-1/4 md:w-1/2 w-full">
                     <div className="h-full px-2 pt-2  flex flex-col relative overflow-hidden">
                     
                     <img src={'/images/' + data.photo } alt="Cat "/>
                     <a className="flex items-center mt-auto text-white text-2xl bg-gray-400 border-0 py-3 px-4 w-full focus:outline-none hover:bg-gray-500 " href={'catalog/'+data.id}>
-                      <h3>{data.name} </h3>
+                      <p3>{data.name} </p3>
                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>

@@ -39,7 +39,7 @@ export default function Catalog() {
             <div className="flex flex-wrap  justify-between ">
 
                 {Animals.map((data)=>(
-                <div className=" xl:w-1/4 md:w-1/2 w-full">
+                <div key={data.id} className=" xl:w-1/4 md:w-1/2 w-full">
                     <div className="h-full px-4 pb-2  flex flex-col relative overflow-hidden ">
                     
                     <img className="border shadow "  src={'/images/' + data.photo } alt="Cat "/>
