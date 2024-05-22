@@ -7,7 +7,7 @@ export default function Blog() {
     const [categories, setCategories] = useState([]);
 
     const fetchNews = async (categoryId) => {
-        const url = categoryId === 0 ? `https://diplomback-f1217ff0e554.herokuapp.com/posts/` : `https://diplomback-f1217ff0e554.herokuapp.com/post/category/${categoryId}`;
+        const url = categoryId === 0 ? `https://diplomback-f1217ff0e554.herokuapp.com/posts/` : `https://diplomback-f1217ff0e554.herokuapp.com/posts/category/${categoryId}`;
         const response = await fetch(url);
         const data = await response.json();
         setNews(data);
