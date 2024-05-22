@@ -151,7 +151,7 @@ export default function PostsList() {
                         
                         <td className="md:px-4 py-3">{post.author_name}</td>
                         <td className="w-10 text-center">
-                            <div class=" flex flex-col md:flex-row items-center">
+                            <div className=" flex flex-col md:flex-row items-center">
                             <Link to={`/news/${post.id}`} className=" w-full md:w-1/3 flex ml-auto text-white bg-gray-400 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                                 <button>Detail</button>
                             </Link>
@@ -194,7 +194,7 @@ export default function PostsList() {
                         
                         <td className="px-4 py-3">{comment.author_name}</td>
                         <td className="w-10 text-center">
-                            <div class="container flex flex-col md:flex-row items-center">
+                            <div className="container flex flex-col md:flex-row items-center">
                             <Link className=" h-full w-1/3 flex ml-auto text-white white border-0 py-2 px-6  rounded">
                             <button> Edit</button>
                             </Link>   
@@ -239,7 +239,7 @@ export default function PostsList() {
                         
                         <td className="px-4 py-3">{comment.author_name}</td>
                         <td className="w-10 text-center">
-                            <div class="container flex flex-col md:flex-row items-center">
+                            <div className="container flex flex-col md:flex-row items-center">
                             <Link  className=" w-1/3 flex ml-auto text-white  border-0 py-2 px-6  rounded">
                             <button>Edit</button>
                             </Link>   
@@ -291,7 +291,7 @@ export default function PostsList() {
                         <td className="px-4 py-3">{animal.place_now}</td>
                         <td className="px-4 py-3">{animal.owner_phone}</td>
                         <td className="w-10 ">
-                            <div class=" flex flex-col md:flex-row items-center justify-start gap-1">
+                            <div className=" flex flex-col md:flex-row items-center justify-start gap-1">
                             
                             <Link to={`/catalog/${animal.id}`} className="w-full md:w-1/2 flex  text-white bg-gray-400  py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                                 <button>Detail</button>

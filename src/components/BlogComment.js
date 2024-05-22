@@ -51,7 +51,7 @@ export default function BlogComment( ) {
         <h2 className="text-lg font-bold mb-4">Comments</h2>
         <div className="flex flex-col space-y-4">
         {comments.map((data)=>(
-            <div className="bg-white p-4  shadow-md mx-4">
+            <div key={data.id} className="bg-white p-4  shadow-md mx-4">
                 <h3 className="text-lg font-bold">{data.author_name}</h3>
                 <p className="text-gray-700 text-sm mb-2">Posted on {data.createdAt}</p>
                 <p className="text-gray-700">{data.text}
