@@ -5,48 +5,18 @@ export default function Blog() {
     const [News, setNews] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(0);
     const [categories, setCategories] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
 
     const fetchNews = async (categoryId) => {
-        setLoading(true);
-        setError(null);
-        try {
-            const url = categoryId === 0 
-                ? `https://diplomback-f1217ff0e554.herokuapp.com/posts/` 
-                : `https://diplomback-f1217ff0e554.herokuapp.com/categories/${categoryId}`;
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`Failed to fetch news: ${response.statusText}`);
-            }
-            const data = await response.json();
-            if (!Array.isArray(data)) {
-                throw new Error('Fetched news data is not an array');
-            }
-            setNews(data);
-        } catch (err) {
-            setError(err.message);
-            setNews([]);
-        } finally {
-            setLoading(false);
-        }
+        const url = categoryId === 0 ? `https://diplomback-f1217ff0e554.herokuapp.com/posts/` : `https://diplomback-f1217ff0e554.herokuapp.com/categories/${categoryId}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        setNews(data);
     };
 
     const fetchCategories = async () => {
-        try {
-            const response = await fetch('https://diplomback-f1217ff0e554.herokuapp.com/categories/');
-            if (!response.ok) {
-                throw new Error(`Failed to fetch categories: ${response.statusText}`);
-            }
-            const data = await response.json();
-            if (!Array.isArray(data)) {
-                throw new Error('Fetched categories data is not an array');
-            }
-            setCategories(data);
-        } catch (err) {
-            setError(err.message);
-            setCategories([]);
-        }
+        const response = await fetch('https://diplomback-f1217ff0e554.herokuapp.com/categories/');
+        const data = await response.json();
+        setCategories(data);
     };
 
     useEffect(() => {
@@ -54,16 +24,10 @@ export default function Blog() {
         fetchCategories();
     }, [selectedCategory]);
 
-    const handleCategoryChange = async (categoryId) => {
-        setSelectedCategory(categoryId);
-        await fetchNews(categoryId);
-    };
-
     const getCategoryName = (categoryId) => {
         const category = categories.find(cat => cat.id === categoryId);
         return category ? category.name : 'Unknown';
     };
-
     const truncateText = (text, maxLength) => {
         if (text.length <= maxLength) {
             return text;
@@ -71,21 +35,13 @@ export default function Blog() {
         return text.slice(0, maxLength) + '...';
     };
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
-
     return (
         <>
             <section>
                 <div className="container mx-auto flex justify-end">
                     <div className='flex justify-end w-8/12 lg:w-4/12 items-center'>
                         <button className=' px-4  h-10  my-2 ho  w-1/2  text-xl text-right '>Select category</button>
-                        <Categories catId={selectedCategory} onClickCategory={handleCategoryChange} />
+                        <Categories catId={selectedCategory} onClickCategory={setSelectedCategory} />
                     </div>
                 </div>
             </section>
